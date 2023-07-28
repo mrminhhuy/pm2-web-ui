@@ -6,16 +6,16 @@ module.exports = {
     async rewrites() {
         return [
             {
-                source: '/api',
-                destination: '/cicd/api'
+                source: '/api/',
+                destination: '/cicd/api/'
             },
             {
-                source: '/bulma',
-                destination: '/cicd/bulma'
+                source: '/bulma/',
+                destination: '/cicd/bulma/'
             },
             {
-                source: '/img',
-                destination: '/cicd/img'
+                source: '/img/',
+                destination: '/cicd/img/'
             }
         ]
     },
