@@ -6,18 +6,9 @@ module.exports = {
     async rewrites() {
         return [
             {
-                source: '/api/',
-                destination: '/cicd/api/'
-            },
-            {
-                source: '/bulma/',
-                destination: '/cicd/bulma/'
-            },
-            {
-                source: '/img/',
-                destination: '/cicd/img/'
+                source: '/',
+                destination: '/cicd'
             }
         ]
-    },
-    assetPrefix: 'https://ttttykhoa-staging.e-plus.vn/cicd'
+    }
 }
