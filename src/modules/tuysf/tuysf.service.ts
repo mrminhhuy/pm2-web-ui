@@ -6,13 +6,29 @@ import {
 export class TuysfService {
   constructor() {}
 
-  async executeDeploy(phone: string) {
+  async executeDeploy(platform: string) {
     var cp = require('child_process');
-    cp.exec('/root/b.sh', function(err, stdout, stderr) {
+    if (!platform) {
+      return {
+        message: 'Kiểm tra platform'
+      }
+    }
+    let path = '';
+    switch (platform) {
+      case 'web':
+        path = '/root/w.sh';
+        break;
+      case 'api':
+        path = '/root/b.sh';
+        break;
+    }
+    cp.exec(path, function(err, stdout, stderr) {
       console.log('err', err);
       console.log('stdout', stdout);
       console.log('stderr', stderr);
     });
-    return true
+    return {
+      message: 'Đang thực thi. Kiểm tra lại sau 5 phút'
+    }
   }
 }

@@ -20,7 +20,7 @@ export class TuysfController {
   @Get('/execute')
   @HttpCode(200)
   @ApiOperation({ summary: '' })
-  async executeDeploy(@Param() phone: any) {
-    return await this.tuysfService.executeDeploy(phone);
+  async executeDeploy(@Param() platform: any) {
+    return await this.tuysfService.executeDeploy(platform);
   }
 }
