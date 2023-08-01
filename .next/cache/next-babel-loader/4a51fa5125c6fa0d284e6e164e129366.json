@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default ((...allowedMethods) => fn => {\n  const methods = {};\n  allowedMethods.forEach(m => methods[m] = true);\n  return async (req, res) => {\n    if (!methods[req.method]) {\n      res.status(404).send('');\n      return;\n    }\n\n    return await fn(req, res);\n  };\n});","map":null,"metadata":{},"sourceType":"module"}

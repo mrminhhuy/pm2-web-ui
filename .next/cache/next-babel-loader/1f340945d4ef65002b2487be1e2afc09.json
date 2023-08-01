@@ -1,0 +1,1 @@
+{"ast":null,"code":"const config = {\n  mongodbUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/pm2-web-ui',\n  salt: process.env.SALT || 'i am dumb'\n};\nexport default config;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import LoginPage from '../client/components/LoginPage';\nimport { withRedux } from '../client/middlewares/redux';\nimport { withAuth } from '../client/middlewares/auth';\nexport default withRedux(withAuth(LoginPage));","map":null,"metadata":{},"sourceType":"module"}

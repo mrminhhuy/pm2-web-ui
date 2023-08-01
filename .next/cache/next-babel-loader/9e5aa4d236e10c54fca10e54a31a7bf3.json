@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { database, session, method, combine } from '../../server/middlewares';\n\nconst logout = async (req, res) => {\n  delete req.session.userId;\n  res.status(200).json({});\n};\n\nexport default combine(method('POST'), database, session, logout);","map":null,"metadata":{},"sourceType":"module"}

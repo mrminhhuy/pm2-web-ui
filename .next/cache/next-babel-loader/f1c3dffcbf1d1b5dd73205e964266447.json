@@ -1,0 +1,1 @@
+{"ast":null,"code":"export let AppAction;\n\n(function (AppAction) {\n  AppAction[\"START\"] = \"start\";\n  AppAction[\"STOP\"] = \"stop\";\n  AppAction[\"RESTART\"] = \"restart\";\n  AppAction[\"RELOAD\"] = \"reload\";\n  AppAction[\"DELETE\"] = \"delete\";\n})(AppAction || (AppAction = {}));\n\n;","map":null,"metadata":{},"sourceType":"module"}

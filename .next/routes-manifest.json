@@ -1,0 +1,1 @@
+{"version":1,"pages404":true,"basePath":"","redirects":[],"rewrites":[],"headers":[],"dynamicRoutes":[{"page":"/_api/apps/[id]","regex":"^\\/_api\\/apps\\/([^/]+?)(?:\\/)?$"},{"page":"/_api/apps/[id]/[instanceId]/logs","regex":"^\\/_api\\/apps\\/([^/]+?)\\/([^/]+?)\\/logs(?:\\/)?$"},{"page":"/apps/[id]","regex":"^\\/apps\\/([^/]+?)(?:\\/)?$"}]}

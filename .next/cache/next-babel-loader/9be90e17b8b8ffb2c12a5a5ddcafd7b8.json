@@ -1,0 +1,1 @@
+{"ast":null,"code":"import v8n from 'v8n';\nexport const username = name => v8n().string().minLength(1).test(name);\nexport const password = password => v8n().string().minLength(1).test(password);\nexport const all = (...args) => args.find(b => b === false) !== false;","map":null,"metadata":{},"sourceType":"module"}
