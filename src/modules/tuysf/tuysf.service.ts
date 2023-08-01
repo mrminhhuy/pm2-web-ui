@@ -35,7 +35,20 @@ export class TuysfService {
       }
     }
     return {
-      message: 'Đang thực thi. Kiểm tra lại sau 5 phút'
+      message: 'Đang thực thi. Kiểm tra lại sau 5 phút. Xem thông tin trạng thái tại đây https://ttttykhoa-staging.e-plus.vn/trd/deploy/check'
     }
+  }
+
+  async checkLog() {
+    var res = ''
+    const fs = require('fs');
+    res = await fs.readFileSync('/root/.pm2/pm2.log', 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      return data;
+    });
+    return res;
   }
 }

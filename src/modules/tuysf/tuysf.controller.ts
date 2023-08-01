@@ -21,4 +21,11 @@ export class TuysfController {
   async executeDeploy(@Query() query: any) {
     return await this.tuysfService.executeDeploy(query);
   }
+
+  @Get('/check')
+  @HttpCode(200)
+  @ApiOperation({ summary: '' })
+  async checkLog() {
+    return await this.tuysfService.checkLog();
+  }
 }
