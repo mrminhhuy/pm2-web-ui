@@ -23,11 +23,17 @@ export class TuysfService {
         path = '/root/b.sh';
         break;
     }
-    cp.exec(path, function(err, stdout, stderr) {
-      console.log('err', err);
-      console.log('stdout', stdout);
-      console.log('stderr', stderr);
-    });
+    try {
+      cp.exec(path, function(err, stdout, stderr) {
+        console.log('err', err);
+        console.log('stdout', stdout);
+        console.log('stderr', stderr);
+      });
+    } catch (err) {
+      return {
+        message: err
+      }
+    }
     return {
       message: 'Đang thực thi. Kiểm tra lại sau 5 phút'
     }
