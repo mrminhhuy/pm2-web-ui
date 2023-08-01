@@ -34,6 +34,7 @@ export class TuysfService {
     }
     try {
       cp.exec(path, function(err, stdout, stderr) {
+        fs.writeFileSync('/root/pm2.log', stdout);
         console.log('err', err);
         console.log('stdout', stdout);
         console.log('stderr', stderr);
