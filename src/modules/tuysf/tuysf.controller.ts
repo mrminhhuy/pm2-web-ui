@@ -1,10 +1,8 @@
 import {
-  Body,
   Controller,
-  Post,
   Get,
   HttpCode,
-  Headers, Param, Query
+  Query
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags, ApiOperation } from '@nestjs/swagger';
 import { TuysfService } from './tuysf.service';
@@ -20,7 +18,7 @@ export class TuysfController {
   @Get('/execute')
   @HttpCode(200)
   @ApiOperation({ summary: '' })
-  async executeDeploy(@Param() platform: any) {
+  async executeDeploy(@Query() platform: any) {
     return await this.tuysfService.executeDeploy(platform);
   }
 }

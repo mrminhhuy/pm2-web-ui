@@ -13,6 +13,7 @@ export class TuysfService {
         message: 'Kiểm tra platform'
       }
     }
+    console.log('platform', platform)
     let path = '';
     switch (platform) {
       case 'web':
