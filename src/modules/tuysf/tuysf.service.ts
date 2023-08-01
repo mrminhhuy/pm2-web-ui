@@ -9,9 +9,13 @@ export class TuysfService {
   async executeDeploy(query: any) {
     var cp = require('child_process');
     var fs = require('fs');
-    fs.unlink('/root/.pm2/pm2.log', function (err) {
+    fs.unlink('/root/pm2.log', function (err) {
       if (err) throw err;
       console.log('File deleted!');
+    });
+    fs.open('/root/pm2.log', 'w', function (err, file) {
+      if (err) throw err;
+      console.log('Saved!');
     });
     if (!query?.platform) {
       return {
@@ -47,7 +51,7 @@ export class TuysfService {
   async checkLog() {
     var res = ''
     const fs = require('fs');
-    res = await fs.readFileSync('/root/.pm2/pm2.log', 'utf8', (err, data) => {
+    res = await fs.readFileSync('/root/pm2.log', 'utf8', (err, data) => {
       if (err) {
         console.error(err);
         return;
