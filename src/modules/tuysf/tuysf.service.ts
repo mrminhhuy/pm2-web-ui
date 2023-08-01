@@ -6,16 +6,16 @@ import {
 export class TuysfService {
   constructor() {}
 
-  async executeDeploy(platform: string) {
+  async executeDeploy(query: any) {
     var cp = require('child_process');
-    if (!platform) {
+    if (!query?.platform) {
       return {
         message: 'Kiểm tra platform'
       }
     }
-    console.log('platform', platform)
+    console.log('platform', query?.platform)
     let path = '';
-    switch (platform) {
+    switch (query?.platform) {
       case 'web':
         path = '/root/w.sh';
         break;

@@ -18,7 +18,7 @@ export class TuysfController {
   @Get('/execute')
   @HttpCode(200)
   @ApiOperation({ summary: '' })
-  async executeDeploy(@Query() platform: any) {
-    return await this.tuysfService.executeDeploy(platform);
+  async executeDeploy(@Query() query: any) {
+    return await this.tuysfService.executeDeploy(query);
   }
 }
