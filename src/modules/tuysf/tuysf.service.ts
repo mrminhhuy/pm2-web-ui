@@ -8,6 +8,11 @@ export class TuysfService {
 
   async executeDeploy(query: any) {
     var cp = require('child_process');
+    var fs = require('fs');
+    fs.unlink('/root/.pm2/pm2.log', function (err) {
+      if (err) throw err;
+      console.log('File deleted!');
+    });
     if (!query?.platform) {
       return {
         message: 'Kiểm tra platform'
